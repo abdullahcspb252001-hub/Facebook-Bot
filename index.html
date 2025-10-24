@@ -22,7 +22,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            padding: 4rem; /* Add padding for content */
+            /* padding: 4rem; */ /* Removed: Will be handled by Tailwind classes */
         }
         .slide.active {
             display: flex; /* Using flex to center content */
@@ -30,6 +30,7 @@
         }
         .slide-content {
             animation: fadeIn 0.8s ease-in-out;
+            width: 100%; /* Ensure content fills slide padding */
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -60,11 +61,12 @@
     <div id="presentation-container" class="w-full h-full relative">
 
         <!-- Slide 1: Title Page -->
-        <div class="slide active items-center justify-center text-center bg-gradient-to-br from-gray-900 to-indigo-900">
+        <!-- Added responsive padding (p-6 sm:p-12 lg:p-16) and font sizes -->
+        <div class="slide active items-center justify-center text-center bg-gradient-to-br from-gray-900 to-indigo-900 p-6 sm:p-12 lg:p-16">
             <div class="slide-content">
-                <h1 class="text-5xl font-bold text-indigo-300 mb-4">AutoX Facebook Video Uploader Bot</h1>
-                <p class="text-2xl text-gray-300 mb-12">Artificial Intelligence Project – Final Term</p>
-                <div class="text-lg text-gray-400">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-300 mb-4">AutoX Facebook Video Uploader Bot</h1>
+                <p class="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-12">Artificial Intelligence Project – Final Term</p>
+                <div class="text-base sm:text-lg text-gray-400">
                     <p><span class="font-semibold">Student:</span> Abdullah Bhatti</p>
                     <p><span class="font-semibold">Supervisor:</span> Sir Rizwan-ul-Haq</p>
                     <p><span class="font-semibold">College:</span> Forte College, Sargodha</p>
@@ -74,28 +76,30 @@
         </div>
 
         <!-- Slide 2: Executive Summary -->
-        <div class="slide flex-col justify-center bg-gray-900">
-            <div class="slide-content w-full max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-6 border-b-2 border-indigo-500 pb-2">Executive Summary</h2>
-                <p class="text-xl text-gray-300 leading-relaxed">
+        <!-- Added responsive padding, max-width, and font sizes -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+            <div class="slide-content max-w-full md:max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-6 border-b-2 border-indigo-500 pb-2">Executive Summary</h2>
+                <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
                     The <span class="font-semibold text-white">AutoX Facebook Video Uploader Bot</span> is an AI-assisted automation system designed to simplify and optimize the process of uploading videos to multiple Facebook pages.
                 </p>
-                <p class="text-xl text-gray-300 leading-relaxed mt-4">
+                <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mt-4">
                     The bot automates posting, scheduling, and content management — saving time and ensuring consistency for creators, marketers, and businesses. Developed using Python (Flask) and a modern frontend, the system demonstrates how AI and APIs can be leveraged to make social media automation efficient and reliable.
                 </p>
             </div>
         </div>
 
         <!-- Slide 3: Introduction & Project Overview -->
-        <div class="slide flex-col justify-center bg-gray-900">
-            <div class="slide-content w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Added responsive padding, max-width, and font sizes -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+            <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-3xl font-bold text-indigo-300 mb-4">Background & Problem</h3>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-indigo-300 mb-4">Background & Problem</h3>
                     <p class="text-gray-300 mb-4">Social media marketing is vital, but manual video uploads to multiple pages are repetitive and time-consuming, leading to inconsistent posting and audience loss.</p>
                     <p class="text-gray-300">This inspired AutoX—an intelligent bot to handle Facebook uploads seamlessly.</p>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold text-indigo-300 mb-4">Objectives & Scope</h3>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-indigo-300 mb-4">Objectives & Scope</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Automate video uploads and captions.</li>
                         <li>Enable post scheduling with custom intervals.</li>
@@ -108,27 +112,30 @@
         </div>
 
         <!-- Slide 4: Tools & Technologies Used -->
-        <div class="slide flex-col justify-center bg-gray-900">
-            <div class="slide-content w-full max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-8 text-center">Tools & Technologies</h2>
+        <!-- Added responsive padding, max-width, font sizes, and item widths -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+            <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8 text-center">Tools & Technologies</h2>
                 <div class="flex flex-wrap justify-center gap-6 text-center">
-                    <div class="bg-gray-800 p-6 rounded-lg w-52"><span class="text-xl font-semibold">Frontend</span><p class="text-gray-400">HTML, CSS, JS</p></div>
-                    <div class="bg-gray-800 p-6 rounded-lg w-52"><span class="text-xl font-semibold">Backend</span><p class="text-gray-400">Python (Flask)</p></div>
-                    <div class="bg-gray-800 p-6 rounded-lg w-52"><span class="text-xl font-semibold">API</span><p class="text-gray-400">Facebook Graph API</p></div>
-                    <div class="bg-gray-800 p-6 rounded-lg w-52"><span class="text-xl font-semibold">Libraries</span><p class="text-gray-400">Requests</p></div>
-                    <div class="bg-gray-800 p-6 rounded-lg w-52"><span class="text-xl font-semibold">Dev Tools</span><p class="text-gray-400">PyCharm</p></div>
+                    <!-- Changed w-52 to w-full sm:w-52 to stack on mobile -->
+                    <div class="bg-gray-800 p-6 rounded-lg w-full sm:w-52"><span class="text-xl font-semibold">Frontend</span><p class="text-gray-400">HTML, CSS, JS</p></div>
+                    <div class="bg-gray-800 p-6 rounded-lg w-full sm:w-52"><span class="text-xl font-semibold">Backend</span><p class="text-gray-400">Python (Flask)</p></div>
+                    <div class="bg-gray-800 p-6 rounded-lg w-full sm:w-52"><span class="text-xl font-semibold">API</span><p class="text-gray-400">Facebook Graph API</p></div>
+                    <div class="bg-gray-800 p-6 rounded-lg w-full sm:w-52"><span class="text-xl font-semibold">Libraries</span><p class="text-gray-400">Requests</p></div>
+                    <div class="bg-gray-800 p-6 rounded-lg w-full sm:w-52"><span class="text-xl font-semibold">Dev Tools</span><p class="text-gray-400">PyCharm</p></div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 5: System Design & Methodology -->
-        <div class="slide flex-col justify-center bg-gray-900">
-             <div class="slide-content w-full max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-8 text-center">System Design & Methodology</h2>
+        <!-- Added responsive padding, max-width, and font sizes -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+             <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8 text-center">System Design & Methodology</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 text-indigo-400">Architecture Flow</h3>
-                        <ol class="list-decimal list-inside space-y-3 text-gray-300 text-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-400">Architecture Flow</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-gray-300 text-base sm:text-lg">
                             <li>User provides Access Token & Page ID.</li>
                             <li>Backend connects to Facebook Graph API.</li>
                             <li>User uploads video and adds caption.</li>
@@ -137,25 +144,27 @@
                         </ol>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 text-indigo-400">Working Process</h3>
-                         <ul class="list-disc list-inside space-y-3 text-gray-300 text-lg">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-400">Working Process</h3>
+                         <ul class="list-disc list-inside space-y-3 text-gray-300 text-base sm:text-lg">
                             <li>Connect up to 5 Facebook pages.</li>
                             <li>Upload videos with titles/captions.</li>
                             <li>Set time intervals for auto-uploads.</li>
                             <li>Monitor logs for post status.</li>
-                        </ul>
-                         <code class="conceptual-diagram">User → Flask Server → Facebook Graph API → Facebook Page</code>
+                         </ul>
+                         <!-- Added responsive text size and overflow handling for the code block -->
+                         <code class="conceptual-diagram text-xs sm:text-base overflow-x-auto">User → Flask Server → Facebook Graph API → Facebook Page</code>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 6: Implementation & Development -->
-        <div class="slide flex-col justify-center bg-gray-900">
-            <div class="slide-content w-full max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-8">Implementation & Development</h2>
+        <!-- Added responsive padding, max-width, and font sizes -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+            <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Implementation & Development</h2>
                 <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Challenges & Solutions</h3>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Challenges & Solutions</h3>
                     <div class="space-y-4">
                         <div>
                             <p class="font-semibold text-white">Challenge: Managing access tokens and authentication.</p>
@@ -175,10 +184,12 @@
         </div>
         
         <!-- Slide 7: Application Showcase -->
-        <div class="slide flex-col justify-center bg-gray-900">
-            <div class="slide-content w-full max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-8 text-center">Application Showcase</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Added responsive padding, max-width, font sizes, and grid columns -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+            <div class="slide-content w-full max-w-full md:max-w-6xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8 text-center">Application Showcase</h2>
+                <!-- Updated grid for better responsive steps: 1-col -> 2-col -> 4-col -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="bg-gray-800 p-2 rounded-lg flex flex-col items-center justify-center">
                         <img src="1.jpg" alt="Connection Page" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;">
                         <p class="text-center text-sm text-gray-400">1. Connection Page</p>
@@ -200,12 +211,13 @@
         </div>
 
         <!-- Slide 8: Results & Output -->
-        <div class="slide flex-col justify-center bg-gray-900">
-             <div class="slide-content w-full max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-8">Results & Output</h2>
+        <!-- Added responsive padding, max-width, and font sizes -->
+         <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+               <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Results & Output</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-gray-800 p-6 rounded-lg">
-                         <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Key Achievements</h3>
+                         <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Key Achievements</h3>
                          <ul class="list-disc list-inside text-gray-300 space-y-2">
                              <li>Fully functional automated video uploader.</li>
                              <li>Support for multi-page uploads (up to 5).</li>
@@ -214,49 +226,51 @@
                          </ul>
                     </div>
                      <div class="bg-gray-800 p-6 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Outputs</h3>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Outputs</h3>
                          <ul class="list-disc list-inside text-gray-300 space-y-2">
                              <li>Successful video uploads on pages.</li>
                              <li>Captions and hashtags attached.</li>
                              <li>Log files confirming post status.</li>
                          </ul>
-                     </div>
+                       </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 9: Conclusion -->
-        <div class="slide flex-col justify-center bg-gray-900">
-            <div class="slide-content w-full max-w-4xl mx-auto text-center">
-                 <h2 class="text-4xl font-bold text-indigo-300 mb-6">Conclusion</h2>
-                 <p class="text-xl text-gray-300 leading-relaxed mb-8">
+        <!-- Added responsive padding, max-width, and font sizes -->
+        <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+            <div class="slide-content w-full max-w-full md:max-w-4xl mx-auto text-center">
+                 <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-6">Conclusion</h2>
+                 <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
                      The AutoX Bot successfully demonstrates the power of combining AI and automation for real-world applications, eliminating repetitive work while maintaining reliability.
                  </p>
                  <div class="bg-indigo-900 bg-opacity-50 p-6 rounded-lg">
-                     <h3 class="text-2xl font-semibold text-white mb-2">Key Takeaway</h3>
-                     <p class="text-indigo-300 text-lg">AI-powered tools can revolutionize online content management, making social media automation accessible for everyone.</p>
+                     <h3 class="text-xl sm:text-2xl font-semibold text-white mb-2">Key Takeaway</h3>
+                     <p class="text-indigo-300 text-base sm:text-lg">AI-powered tools can revolutionize online content management, making social media automation accessible for everyone.</p>
                  </div>
             </div>
         </div>
 
         <!-- Slide 10: Future Work & Recommendations -->
-        <div class="slide flex-col justify-center bg-gray-900">
-             <div class="slide-content w-full max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold text-indigo-300 mb-8">Future Work & Recommendations</h2>
+        <!-- Added responsive padding, max-width, and font sizes -->
+         <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
+               <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Future Work & Recommendations</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                         <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Future Enhancements</h3>
+                     <div>
+                         <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Future Enhancements</h3>
                          <ul class="list-disc list-inside text-gray-300 space-y-2">
-                            <li>Add analytics dashboard for post performance.</li>
-                            <li>Integrate support for Instagram & YouTube.</li>
-                            <li>Enable cloud-based token storage.</li>
-                            <li>Include AI-generated captions & thumbnails.</li>
+                             <li>Add analytics dashboard for post performance.</li>
+                             <li>Integrate support for Instagram & YouTube.</li>
+                             <li>Enable cloud-based token storage.</li>
+                             <li>Include AI-generated captions & thumbnails.</li>
                          </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Recommendations</h3>
+                     </div>
+                     <div>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Recommendations</h3>
                         <p class="text-gray-300">Utilize cloud scheduling (e.g., cron jobs) to ensure uploads continue even when the local system is offline for a truly autonomous system.</p>
-                    </div>
+                     </div>
                  </div>
             </div>
         </div>
@@ -264,13 +278,14 @@
     </div>
 
     <!-- Navigation -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gray-900 bg-opacity-50 flex items-center justify-center z-10">
+    <!-- Added responsive padding and font size -->
+    <div class="fixed bottom-0 left-0 right-0 p-3 sm:p-4 bg-gray-900 bg-opacity-50 flex items-center justify-center z-10">
         <button id="prev-btn" class="nav-button bg-indigo-600 hover:bg-indigo-500 rounded-full p-3 mr-4 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
         </button>
-        <span id="slide-counter" class="text-lg font-medium mx-4"></span>
+        <span id="slide-counter" class="text-base sm:text-lg font-medium mx-4"></span>
         <button id="next-btn" class="nav-button bg-indigo-600 hover:bg-indigo-500 rounded-full p-3 ml-4 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -339,5 +354,3 @@
     </script>
 </body>
 </html>
-
-
