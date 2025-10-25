@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated viewport to allow scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
     <title>AutoX Facebook Video Uploader Bot - Presentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            overflow: hidden; /* Prevent scrolling the main page */
+            /* overflow: hidden; */ /* Removed to allow pinch-to-zoom and panning */
         }
         .slide {
             display: none;
@@ -151,8 +152,8 @@
                             <li>Set time intervals for auto-uploads.</li>
                             <li>Monitor logs for post status.</li>
                          </ul>
-                         <!-- Added responsive text size and overflow handling for the code block -->
-                         <code class="conceptual-diagram text-xs sm:text-base overflow-x-auto">User → Flask Server → Facebook Graph API → Facebook Page</code>
+                        <!-- Added responsive text size and overflow handling for the code block -->
+                        <code class="conceptual-diagram text-xs sm:text-base overflow-x-auto">User → Flask Server → Facebook Graph API → Facebook Page</code>
                     </div>
                 </div>
             </div>
@@ -191,19 +192,19 @@
                 <!-- Updated grid for better responsive steps: 1-col -> 2-col -> 4-col -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="bg-gray-800 p-2 rounded-lg flex flex-col items-center justify-center">
-                        <img src="1.jpg" alt="Connection Page" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;">
+                        <img src="1.jpg" alt="Connection Page" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;" onerror="this.src='https://placehold.co/600x400/2D3748/E2E8F0?text=Connection+Page'">
                         <p class="text-center text-sm text-gray-400">1. Connection Page</p>
                     </div>
                      <div class="bg-gray-800 p-2 rounded-lg flex flex-col items-center justify-center">
-                        <img src="2.jpg" alt="Main Dashboard" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;">
+                        <img src="2.jpg" alt="Main Dashboard" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;" onerror="this.src='https://placehold.co/600x400/2D3748/E2E8F0?text=Main+Dashboard'">
                          <p class="text-center text-sm text-gray-400">2. Main Dashboard</p>
                     </div>
                      <div class="bg-gray-800 p-2 rounded-lg flex flex-col items-center justify-center">
-                        <img src="3.jpg" alt="Uploading & Scheduling" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;">
+                        <img src="3.jpg" alt="Uploading & Scheduling" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;" onerror="this.src='https://placehold.co/600x400/2D3748/E2E8F0?text=Upload+Page'">
                         <p class="text-center text-sm text-gray-400">3. Upload & Schedule</p>
                     </div>
                      <div class="bg-gray-800 p-2 rounded-lg flex flex-col items-center justify-center">
-                        <img src="4.jpg" alt="Settings Page" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;">
+                        <img src="4.jpg" alt="Settings Page" class="rounded-md w-full h-auto object-contain mb-2" style="max-height: 200px;" onerror="this.src='https://placehold.co/600x400/2D3748/E2E8F0?text=Settings+Page'">
                         <p class="text-center text-sm text-gray-400">4. Settings</p>
                     </div>
                 </div>
@@ -213,10 +214,10 @@
         <!-- Slide 8: Results & Output -->
         <!-- Added responsive padding, max-width, and font sizes -->
          <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
-               <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
-                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Results & Output</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-800 p-6 rounded-lg">
+              <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
+                 <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Results & Output</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <div class="bg-gray-800 p-6 rounded-lg">
                          <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Key Achievements</h3>
                          <ul class="list-disc list-inside text-gray-300 space-y-2">
                              <li>Fully functional automated video uploader.</li>
@@ -224,18 +225,18 @@
                              <li>Robust scheduling system for posts.</li>
                              <li>User-friendly web interface.</li>
                          </ul>
-                    </div>
-                     <div class="bg-gray-800 p-6 rounded-lg">
-                        <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Outputs</h3>
+                     </div>
+                      <div class="bg-gray-800 p-6 rounded-lg">
+                         <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Outputs</h3>
                          <ul class="list-disc list-inside text-gray-300 space-y-2">
                              <li>Successful video uploads on pages.</li>
                              <li>Captions and hashtags attached.</li>
                              <li>Log files confirming post status.</li>
                          </ul>
-                       </div>
-                </div>
+                        </div>
+                 </div>
             </div>
-        </div>
+         </div>
 
         <!-- Slide 9: Conclusion -->
         <!-- Added responsive padding, max-width, and font sizes -->
@@ -256,9 +257,9 @@
         <!-- Added responsive padding, max-width, and font sizes -->
          <div class="slide flex-col justify-center bg-gray-900 p-6 sm:p-12 lg:p-16">
                <div class="slide-content w-full max-w-full md:max-w-5xl mx-auto">
-                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Future Work & Recommendations</h2>
+                 <h2 class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-8">Future Work & Recommendations</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                     <div>
+                       <div>
                          <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Future Enhancements</h3>
                          <ul class="list-disc list-inside text-gray-300 space-y-2">
                              <li>Add analytics dashboard for post performance.</li>
@@ -266,14 +267,14 @@
                              <li>Enable cloud-based token storage.</li>
                              <li>Include AI-generated captions & thumbnails.</li>
                          </ul>
-                     </div>
-                     <div>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Recommendations</h3>
-                        <p class="text-gray-300">Utilize cloud scheduling (e.g., cron jobs) to ensure uploads continue even when the local system is offline for a truly autonomous system.</p>
-                     </div>
+                       </div>
+                       <div>
+                         <h3 class="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Recommendations</h3>
+                         <p class="text-gray-300">Utilize cloud scheduling (e.g., cron jobs) to ensure uploads continue even when the local system is offline for a truly autonomous system.</p>
+                       </div>
                  </div>
             </div>
-        </div>
+         </div>
 
     </div>
 
@@ -350,7 +351,14 @@
 
             // Initial setup
             showSlide(currentSlide);
+
+            // --- Pinch-to-Zoom & Pan Logic ---
+            // We enable native browser zoom, so no custom JS is needed for the zoom itself.
+            // The changes in the <head> (viewport meta tag) and <style> (body overflow)
+            // are all that's required.
         });
     </script>
 </body>
 </html>
+
+
